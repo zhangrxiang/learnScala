@@ -38,9 +38,32 @@ object ScalaStrings {
 //    1
 //    char charAt(int index)
 //    返回指定位置的字符
+    var charAt = "charAt"
+    print(charAt.charAt(0))
+    print(charAt.charAt(1))
+    print(charAt.charAt(2))
+    print(charAt.charAt(3))
+    print(charAt.charAt(4))
+    print(charAt.charAt(5))
+//    print(charAt.charAt(6)) //java.lang.StringIndexOutOfBoundsException
+    for(s <- charAt){
+      println(s)
+    }
+
 //    2
 //    int compareTo(Object o)
 //    比较字符串与对象
+    var compareTo1 = "compareTo1"
+    val to1: Int = compareTo1.compareTo("compareTo")
+    println(to1)
+
+    var compareTo = "compareTo"
+    val to: Int = compareTo.compareTo("compareTo")
+    println(to)
+
+    var compare = "compare"
+    val t: Int = compare.compareTo("comparea")
+    println(t)
 //    3
 //    int compareTo(String anotherString)
 //    按字典顺序比较两个字符串
