@@ -45,8 +45,8 @@ object ScalaArrayFunction {
 
   def emptyTest(): Unit = {
 //    返回长度为 0 的数组
-    val empty: Array[String] = empty
-    println(empty.length)
+    val e: Array[String] = empty
+    println(e.length)
   }
 
   def iterateTest(): Unit = {
