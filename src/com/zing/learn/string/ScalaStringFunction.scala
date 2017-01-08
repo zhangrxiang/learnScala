@@ -97,6 +97,7 @@ object ScalaStringFunction {
     //    21
     //    int lastIndexOf(int ch)
     //    返回指定字符在此字符串中最后一次出现处的索引
+    println("str.lastIndexOf(\"S\") "+str.lastIndexOf("S"))
     //    22
     //    int lastIndexOf(int ch, int fromIndex)
     //    返回指定字符在此字符串中最后一次出现处的索引，从指定的索引处开始进行反向搜索
@@ -117,12 +118,19 @@ object ScalaStringFunction {
     //    27
     //    boolean regionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len)
     //    测试两个字符串区域是否相等
+    println("str.regionMatches(true,1,\"Scala\",1,2) "+ str.regionMatches(true,1,"Scala",1,2))
+    println("str.regionMatches(true,1,\"HelloScala\",1,2) "+ str.regionMatches(true,1,"HelloScala",1,2))
     //    28
     //    boolean regionMatches(int toffset, String other, int ooffset, int len)
     //    测试两个字符串区域是否相等
+    println("str.regionMatches(true,1,\"HelloScala\",1,2) "+ str.regionMatches(1,"HelloScala",1,2))
+
     //    29
     //    String replace(char oldChar, char newChar)
     //    返回一个新的字符串，它是通过用 newChar 替换此字符串中出现的所有 oldChar 得到的
+    val replace: String = str.replace("Scala","World")
+    println("str.replace(\"Scala\",\"World\") "+ replace)
+    println(str)
     //    30
     //    String replaceAll(String regex, String replacement
     //      使用给定的 replacement 替换此字符串所有匹配给定的正则表达式的子字符串
