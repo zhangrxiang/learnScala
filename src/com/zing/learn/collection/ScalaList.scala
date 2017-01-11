@@ -75,7 +75,6 @@ object ScalaList {
     //    List(12, 11, 3, 2, 1, 21)
     println(y)
 
-    //    todo?????
     //    def addString(b: StringBuilder): StringBuilder
     //    将列表的所有元素添加到 StringBuilder
     val str:StringBuilder = new StringBuilder
@@ -179,6 +178,71 @@ object ScalaList {
     strings.foreach(fun)
     println(strings)
 
+//    def indexOf(elem: A, from: Int): Int
+//    从指定位置 from 开始查找元素第一次出现的位置
+    val of = strings.indexOf("hly",1)
+    println(of)
+
+//    def init: List[A]
+//    返回所有元素，除了最后一个
+    println(strings.init)
+
+//    def intersect(that: Seq[A]): List[A]
+//    计算多个集合的交集
+    val intersect = strings.intersect("zing"::("b"::("c"::Nil)))
+//    List(zing)
+    println(intersect)
+
+//    def isEmpty: Boolean
+//    检测列表是否为空
+    val empty = strings.isEmpty
+    println(empty)
+
+//    def iterator: Iterator[A]
+//    创建一个新的迭代器来迭代元素
+    val iter = strings.iterator
+    println(iter)
+    while (iter.hasNext){
+      val next = iter.next()
+      println(next)
+    }
+
+//    def last: A
+//    返回最后一个元素
+    println(strings.last)
+
+//    def lastIndexOf(elem: A, end: Int): Int
+//    在指定的位置 end 开始查找元素最后出现的位置
+    val of1 = strings.lastIndexOf("hly",2)
+    println(strings)
+    println(of1)
+
+//    def length: Int
+//    返回列表长度
+    println(strings.length)
+
+//    def map[B](f: (A) => B): List[B]
+//    通过给定的方法将所有元素重新计算
+    //todo???????
+//    strings.map(f = String => Unit)
+
+
+//    def max: A
+//    查找最大元素
+    println(strings.max)
+
+//    def min: A
+//    查找最小元素
+    println(strings.min)
+
+//    def mkString: String
+//    列表所有元素作为字符串显示
+    val string = strings.mkString
+    println(string)
+
+//    def mkString(sep: String): String
+//    使用分隔符将列表所有元素作为字符串显示
+    println(strings.mkString("-"))
 
   }
   def  fun(str:String): Unit ={
