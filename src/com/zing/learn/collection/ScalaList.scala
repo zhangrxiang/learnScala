@@ -49,6 +49,10 @@ object ScalaList {
     println( "site 继续反转 : " + site.reverse.reverse )
   }
 
+  def funMap = {
+
+  }
+
   def commonTest(): Unit = {
 
 
@@ -56,9 +60,10 @@ object ScalaList {
     //    为列表预添加元素
     val x = List(1)
     var y = 2 +: x
-    y = 3 +: y
+    y = y.+:(3)
     //    List(3, 2, 1)
     println(y)
+    println("$"*40)
 
     //    def ::(x: A): List[A]
     //    在列表开头添加元素
@@ -67,7 +72,7 @@ object ScalaList {
     println(y)
     y = 12 :: y
     //    List(12, 11, 3, 2, 1)
-    println(y)
+    println(y.::(13))
 
     //    def :+(elem: A): List[A]
     //    复制添加元素后列表。
@@ -152,7 +157,7 @@ object ScalaList {
 //    def exists(p: (A) => Boolean): Boolean
 //    判断列表中指定条件的元素是否存在。
 //    判断l是否存在某个元素:
-    val exists = dropWhile.exists(_ == 22)
+    val exists = dropWhile.exists(_ > 22)
 //    true
     println(exists)
 
@@ -164,7 +169,7 @@ object ScalaList {
     println(strings)
     val filter = strings.filter(a => a.length ==3 )
     println(filter)
-
+    println("z"::"l"::"y"::Nil)
 
 //    def forall(p: (A) => Boolean): Boolean
 //    检测所有元素。
@@ -224,8 +229,10 @@ object ScalaList {
 //    def map[B](f: (A) => B): List[B]
 //    通过给定的方法将所有元素重新计算
     //todo???????
-//    strings.map(f = String => Unit)
-
+//    strings.map(funMap())
+//    def funMap(string: String)={
+//
+//    }
 
 //    def max: A
 //    查找最大元素
