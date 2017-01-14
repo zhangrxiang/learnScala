@@ -1,5 +1,7 @@
 package com.zing.learn.string
 
+import java.util.Locale
+
 import com.zing.learn.HelloScala
 
 /**
@@ -35,7 +37,7 @@ object ScalaStringFunction {
     //      9
     //    boolean endsWith(String suffix)
     //    测试此字符串是否以指定的后缀结束
-    val str = "HelloScala"
+    var str = "HelloScala"
     var endsWith: Boolean = str.endsWith("Scala")
     println("endsWith : "+endsWith)
     endsWith = str.endsWith("scala")
@@ -89,6 +91,7 @@ object ScalaStringFunction {
     //    19
     //    int indexOf(String str, int fromIndex)
     //    返回指定子字符串在此字符串中第一次出现处的索引，从指定的索引开始
+//    str.indexOf(1)
     //    20
     //    String intern()
     //    返回字符串对象的规范化表示形式
@@ -146,39 +149,58 @@ object ScalaStringFunction {
     //    34
     //    boolean startsWith(String prefix)
     //    测试此字符串是否以指定的前缀开始
+    println(str.startsWith("He"))
     //    35
     //    boolean startsWith(String prefix, int toffset)
     //    测试此字符串从指定索引开始的子字符串是否以指定前缀开始。
+    println(str.startsWith("S",5))
+    println(str.startsWith("S",4))
     //    36
     //    CharSequence subSequence(int beginIndex, int endIndex)
     //    返回一个新的字符序列，它是此序列的一个子序列
+    val subSequence = str.subSequence(0,str.length)
+    println(subSequence)
+    println(str.subSequence(0,str.length/2))
     //    37
     //    String substring(int beginIndex)
     //    返回一个新的字符串，它是此字符串的一个子字符串
+    println(str.substring(str.length/2))
+    println(str.substring(str.length/5))
     //    38
     //    String substring(int beginIndex, int endIndex)
     //    返回一个新字符串，它是此字符串的一个子字符串
+    println(str.substring(str.length/5,str.length/2))
     //    39
     //    char[] toCharArray()
     //    将此字符串转换为一个新的字符数组
+    val array = str.toCharArray
+    array.foreach({x => print(x+"\t")})
     //    40
     //    String toLowerCase()
     //    使用默认语言环境的规则将此 String 中的所有字符都转换为小写
+    println()
+    println(str.toLowerCase())
     //    41
     //    String toLowerCase(Locale locale)
     //    使用给定 Locale 的规则将此 String 中的所有字符都转换为小写
+    println(str.toLowerCase(Locale.CHINA))
     //    42
     //    String toString()
     //    返回此对象本身（它已经是一个字符串！）
     //    43
     //    String toUpperCase()
     //    使用默认语言环境的规则将此 String 中的所有字符都转换为大写
+    println(str.toUpperCase())
     //    44
     //    String toUpperCase(Locale locale)
     //    使用给定 Locale 的规则将此 String 中的所有字符都转换为大写
     //    45
     //    String trim()
     //    删除指定字符串的首尾空白符
+    str = " start "+str +" end "
+    println(str)
+    println(str.trim)
+
     //    46
     //    static String valueOf(primitive data type x)
     //    返回指定类型参数的字符串表示形式
